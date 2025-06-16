@@ -1,0 +1,84 @@
+body {
+  font-family: 'Georgia', serif;
+  background: #f6f0e6;
+  color: #3a2f1b;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  padding: 2rem 1rem 0.5rem;
+  background: #fefdf9;
+}
+
+nav {
+  margin-bottom: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #2a2a2a;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3rem;
+  color: #b83932;
+  margin: 0.2rem 0;
+}
+
+h2 {
+  font-family: 'Brush Script MT', cursive;
+  color: #b83932;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+article {
+  background: #fff8f1;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+article img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem;
+}
+
+button {
+  background-color: #d1a857;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #b48d45;
+}
