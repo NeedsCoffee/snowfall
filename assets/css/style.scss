@@ -5,10 +5,10 @@
 // --- Font and Color Variables ---
 $font-title: 'Dancing Script', cursive;
 $font-body: 'Lora', serif;
-$color-background: #f5efe6;
-$color-text: #5c554e;
-$color-heading: #c84b31;
-$color-button: #d4a373;
+$color-background: #2b3a4a; // A deep, dark slate blue
+$color-text: #fdfaf3;       // The original cream color, now used for text
+$color-heading: #c84b31;    // This warm red still works well
+$color-button: #d4a373;     // The gold button color will pop nicely
 $color-button-hover: #c4925b;
 
 // --- Base Styles ---
@@ -37,11 +37,11 @@ main {
     z-index: -1;
 
     .snowflake {
-        color: #d1d1d1;
+        color: #ffffff; // Pure white for high contrast
         font-size: 1.5rem;
         position: absolute;
         top: -10%;
-        opacity: 0.4;
+        opacity: 0.3;   // A slightly lower opacity for a softer effect on dark bg
         user-select: none;
         animation: fall linear infinite;
     }
@@ -65,7 +65,7 @@ main {
 // --- Header and Navigation ---
 .site-header {
     padding: 1.5rem 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); // A subtle, transparent white line
     margin-bottom: 2rem;
 }
 
