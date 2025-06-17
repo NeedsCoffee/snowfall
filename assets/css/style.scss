@@ -37,11 +37,11 @@ main {
     z-index: -1;
 
     .snowflake {
-        color: #fff;
+        color: #d1d1d1;
         font-size: 1.5rem;
         position: absolute;
         top: -10%;
-        opacity: 0.2;
+        opacity: 0.4;
         user-select: none;
         animation: fall linear infinite;
     }
