@@ -1,0 +1,14 @@
+# Site settings
+title: Robin Bayliss
+description: "The official website for romance author Robin Bayliss and her Snowball Falls Series."
+url: "" # Will be automatically set by GitHub Pages
+
+# Build settings
+theme: minima # A default theme, though we will override most styles
+plugins:
+  - jekyll-feed
+
+# Sass settings
+sass:
+  sass_dir: assets/css
+  style: compressed
