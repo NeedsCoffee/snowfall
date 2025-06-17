@@ -13,13 +13,10 @@ title: Books
     <div class="book-card">
       <div class="book-cover">
         <img src="{{ '/assets/images/' | append: book.cover_image | relative_url }}" alt="{{ book.title }} book cover">
-        <div class="cover-overlay-title">
-          {{ book.overlay_title | newline_to_br }}
-        </div>
       </div>
       <div class="book-info">
         <h3>{{ book.info_title }}</h3>
-        <p>{{ book.summary }}</p>
+        <p>{{ book.summary | newline_to_br }}</p>
         <a href="#" class="buy-button">Buy Now</a>
       </div>
     </div>
