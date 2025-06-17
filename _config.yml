@@ -1,10 +1,11 @@
 # Site settings
 title: Robin Bayliss
 description: "The official website for romance author Robin Bayliss and her Snowball Falls Series."
-url: "https://needscoffee.github.io/snowfall/" # Will be automatically set by GitHub Pages
+url: "https://needscoffee.github.io" # Your main domain
+baseurl: "/snowfall" # The name of your repository
 
 # Build settings
-theme: minima # A default theme, though we will override most styles
+theme: minima
 plugins:
   - jekyll-feed
 
