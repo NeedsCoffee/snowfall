@@ -12,7 +12,7 @@ title: Books
   {% for book in site.data.books %}
     <div class="book-card">
       <div class="book-cover">
-        <img src="/assets/images/{{ book.cover_image }}" alt="{{ book.title }} book cover">
+        <img src="{{ '/assets/images/' | append: book.cover_image | relative_url }}" alt="{{ book.title }} book cover">
         <div class="cover-overlay-title">
           {{ book.overlay_title | newline_to_br }}
         </div>
