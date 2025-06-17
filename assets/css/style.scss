@@ -1,0 +1,217 @@
+---
+# This empty front matter is required for Sass to be processed by Jekyll
+---
+
+// --- Font and Color Variables ---
+$font-title: 'Dancing Script', cursive;
+$font-body: 'Lora', serif;
+$color-background: #fdfaf3;
+$color-text: #5c554e;
+$color-heading: #c84b31;
+$color-button: #d4a373;
+$color-button-hover: #c4925b;
+
+// --- Base Styles ---
+body {
+    background-color: $color-background;
+    font-family: $font-body;
+    color: $color-text;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+// --- Snowflake Background ---
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    .snowflake {
+        color: #fff;
+        font-size: 1.5rem;
+        position: absolute;
+        top: -10%;
+        opacity: 0.2;
+        user-select: none;
+        animation: fall linear infinite;
+    }
+}
+
+// Positioning each snowflake randomly
+@for $i from 1 through 12 {
+    .snowflake:nth-child(#{$i}) {
+        left: percentage(random());
+        animation-duration: (10s + random(10) * 1s);
+        animation-delay: (random(10) * -1s);
+        font-size: (1rem + random(10) * 0.1rem);
+    }
+}
+
+@keyframes fall {
+    to { transform: translateY(105vh); }
+}
+
+
+// --- Header and Navigation ---
+.site-header {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+
+    a {
+        text-decoration: none;
+        color: $color-text;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-heading;
+        }
+    }
+}
+
+// --- Main Page Titles ---
+.site-title-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.site-title {
+    font-family: $font-title;
+    color: $color-heading;
+    font-size: 4.5rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.series-title {
+    font-family: $font-title;
+    color: $color-heading;
+    font-size: 2.5rem;
+    margin: 0.5rem 0 0 0;
+    font-weight: 700;
+    border-bottom: 2px solid $color-button;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+// --- Book Grid ---
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.book-cover {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.cover-overlay-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: white;
+    font-family: $font-title;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.book-info {
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+    }
+
+    p {
+        margin: 0 0 1.5rem 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: $color-button;
+    color: white;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $color-button-hover;
+    }
+}
+
+
+// --- About Page Styles ---
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: $color-heading;
+    margin-top: 0;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
