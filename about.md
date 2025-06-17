@@ -10,6 +10,6 @@ title: About
         <p>These days, she can often be found tucked into the back corner of Snowdrop Books, sipping cocoa of uncertain origin and “gathering inspiration” (which definitely doesn’t mean eavesdropping, probably). She insists all the stories are entirely fictional. The townsfolk aren’t convinced.</p>
     </div>
     <div class="about-image-container">
-        <img src="/assets/images/author-robin-bayliss.jpg" alt="A woman in a green sweater holding a mug, looking out a window at a snowy scene.">
+        <img src="{{ '/assets/images/author-robin-bayliss.jpg' | relative_url }}" alt="A woman in a green sweater holding a mug, looking out a window at a snowy scene.">
     </div>
 </div>
