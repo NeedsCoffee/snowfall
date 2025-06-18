@@ -202,3 +202,18 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+// --- Mobile Responsiveness Fixes ---
+@media (max-width: 576px) {
+    .book-grid {
+        /* On small screens, force a single, fully flexible column.
+           This overrides the `minmax(280px, 1fr)` rule and allows
+           content to reflow correctly on zoom without overflowing. */
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        /* Stack the about page content vertically on mobile */
+        grid-template-columns: 1fr;
+    }
+}
