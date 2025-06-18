@@ -217,3 +217,23 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Add Falling Hearts --- */
+.snowflake:nth-child(3),
+.snowflake:nth-child(7),
+.snowflake:nth-child(11) {
+    // Make the hearts slightly more visible and have them fall a little slower
+    // so they stand out from the snowflakes.
+    opacity: 0.7;
+    animation-duration: 17s;
+
+    // This is a trick to hide the original snowflake character that's in the HTML
+    font-size: 0;
+
+    // Now, we use a pseudo-element to create the heart from scratch
+    &::before {
+        content: '♥';
+        font-size: 1.6rem;       // Set the size for the heart character
+        color: $color-heading;  // Use the theme's warm red color
+    }
+}
