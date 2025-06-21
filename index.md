@@ -17,7 +17,7 @@ title: Books
       <div class="book-info">
         <h3>{{ book.info_title }}</h3>
         <p>{{ book.summary | newline_to_br }}</p>
-        <a href="#" class="buy-button">Buy Now</a>
+        <a href="{{ book.buy_now_url }}" class="buy-button" target="_blank">Buy Now</a>
       </div>
     </div>
   {% endfor %}
