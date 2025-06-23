@@ -1,3 +1,7 @@
+---
+layout: default
+title: Privacy Policy
+---
 Effective Date: 1 June 2025
 Last Updated: 1 June 2025
 Applies To: robingbayliss.com, MailerLite email list, newsletter giveaways, and any other sites or services run under the Robin Bayliss author name.
