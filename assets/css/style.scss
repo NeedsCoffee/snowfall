@@ -237,3 +237,28 @@ main {
         color: $color-heading;  // Use the theme's warm red color
     }
 }
+
+/* --- Footer Styles --- */
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-copyright {
+    margin: 0 0 1rem 0;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin: 0 0.75rem;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        color: $color-button; // Use the theme's gold button color on hover
+    }
+}
