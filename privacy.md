@@ -30,7 +30,7 @@ Last Updated: 24 June 2025
 Applies To: robinbayliss.com, MailerLite email list, newsletter giveaways, and any other sites or services run under the Robin Bayliss author name.
 
 1. Who We Are
-Robin Bayliss is a pen name representing a fictional author character and the brand behind the Snowball Falls romance series. The website and newsletter are operated by Ceri Clark, based in the UK and compliant with UK GDPR and US CAN-SPAM regulations.
+Robin Bayliss is a pen name representing a fictional author character and the brand behind the Snowball Falls romance series. The website and newsletter are operated by Robin Bayliss, a UK-based author brand. All communications and data handling are managed in accordance with UK and international privacy regulations.
 
 2. What We Collect
 We may collect:
