@@ -26,7 +26,9 @@ Robin ❄️
 <h3 class="page-title">📜 Privacy Policy (Legal Version)</h3>
 
 Effective Date: 1 June 2025
+
 Last Updated: 24 June 2025
+
 Applies To: robinbayliss.com, MailerLite email list, newsletter giveaways, and any other sites or services run under the Robin Bayliss author name.
 
 1. Who We Are
