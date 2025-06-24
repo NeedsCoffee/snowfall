@@ -2,12 +2,35 @@
 layout: default
 title: Privacy Policy
 ---
+<h1 class="page-title">Privacy Policy</h1>
+
+<h2 class="page-title">❄️ TL;DR (from Robin, with cocoa in hand):</h2>
+
+Hi, lovely reader!
+
+I'm Robin Bayliss, and while I'd much rather be writing about snowball fights and awkward kisses under the mistletoe, apparently I have to talk about privacy too (ugh, grown-up stuff).
+
+Here's the gist:
+- I only collect the info you give me (like your name and email).
+- I use it to send you charming emails about books, giveaways, and Snowball Falls gossip (the good kind).
+- I won't sell your details. Not to spammers, scammers, or even the town council.
+- You can unsubscribe anytime, though I'll miss you more than Emma misses Bing Crosby when he hides under the bed.
+
+The legal version starts below. It's very serious and has fewer jokes, but it's important. Brew a hot chocolate and scroll on if you're curious or just like reading things in small print.
+
+With cocoa and sparkle,
+Robin ❄️
+
+⸻
+
+<h2 class="page-title">📜 Privacy Policy (Legal Version)</h2>
+
 Effective Date: 1 June 2025
-Last Updated: 1 June 2025
+Last Updated: 24 June 2025
 Applies To: robingbayliss.com, MailerLite email list, newsletter giveaways, and any other sites or services run under the Robin Bayliss author name.
 
 1. Who We Are
-> Robin Bayliss is a pen name representing a fictional author character and the brand behind the Snowball Falls romance series. The website and newsletter are operated by [Your Legal Name or Business Name, if applicable], based in the UK and compliant with UK GDPR and US CAN-SPAM regulations.
+> Robin Bayliss is a pen name representing a fictional author character and the brand behind the Snowball Falls romance series. The website and newsletter are operated by Ceri Clark, based in the UK and compliant with UK GDPR and US CAN-SPAM regulations.
 
 2. What We Collect
 > We may collect:
@@ -24,7 +47,7 @@ Applies To: robingbayliss.com, MailerLite email list, newsletter giveaways, and 
 > We do not sell, trade, or rent your personal data.
 
 4. Your Rights (UK and EU under GDPR)
-> If you’re in the UK or EU, you have the right to:
+> If you're in the UK or EU, you have the right to:
 > - Access your data
 > - Correct your data
 > - Delete your data
@@ -44,13 +67,13 @@ Applies To: robingbayliss.com, MailerLite email list, newsletter giveaways, and 
 7. Data Storage
 > Your data may be processed and stored through MailerLite or similar email providers, which comply with international privacy laws and secure protocols.
 
-8. Children’s Privacy
+8. Children's Privacy
 > This site is not intended for anyone under 13 years of age. We do not knowingly collect data from children.
 
 9. Changes to This Policy
-> This privacy policy may be updated from time to time. Changes will be reflected on this page with a new “Last Updated” date.
+> This privacy policy may be updated from time to time. Changes will be reflected on this page with a new "Last Updated" date.
 
 10. Contact Us
 > For questions or privacy-related requests:
 > 📧 Contact me from my contact page.
-> 📮 Robin Bayliss, Unit 154663, PO Box 7169, Poole, BH15 9EL
+> 📮 Robin Bayliss, Unit 154663, PO Box 7169, Poole, BH15 9EL, UK
