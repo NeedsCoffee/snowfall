@@ -55,7 +55,7 @@ If you're in the UK or EU, you have the right to:
 - Delete your data
 - Withdraw consent
 - File a complaint with the ICO (UK)
-To exercise these rights, contact us via the contact page.
+To exercise these rights, contact us via the <a href="{{ "/contact.html" | relative_url }}">contact page</a>.
 
 5. Your Rights (USA under CAN-SPAM)
 Under US law:
@@ -77,5 +77,5 @@ This privacy policy may be updated from time to time. Changes will be reflected 
 
 10. Contact Us
 For questions or privacy-related requests:
-- 📧 Contact me from my contact page
+- 📧 Contact me from my <a href="{{ "/contact.html" | relative_url }}">contact page</a>
 - 📮 Robin Bayliss, Unit 154663, PO Box 7169, Poole, BH15 9EL, United Kingdom
