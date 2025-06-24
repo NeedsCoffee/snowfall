@@ -12,6 +12,10 @@ $color-button: #d4a373;     // The gold button color will pop nicely
 $color-button-hover: #c4925b;
 
 // --- Base Styles ---
+html {
+  overflow-y: scroll;
+}
+
 body {
     background-color: $color-background;
     font-family: $font-body;
