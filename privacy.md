@@ -75,5 +75,5 @@ Applies To: robingbayliss.com, MailerLite email list, newsletter giveaways, and 
 
 10. Contact Us
 > For questions or privacy-related requests:
-> 📧 Contact me from my contact page.
-> 📮 Robin Bayliss, Unit 154663, PO Box 7169, Poole, BH15 9EL, UK
+> - 📧 Contact me from my contact page
+> - 📮 Robin Bayliss, Unit 154663, PO Box 7169, Poole, BH15 9EL, UK
