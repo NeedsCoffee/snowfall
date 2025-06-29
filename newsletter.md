@@ -908,7 +908,7 @@ title: Newsletter
         <div class="ml-form-embedContent" style=" ">
 
           <h4>Newsletter</h4>
-          <p><span style="font-size: 16px;">Join me in Snowball Falls for love stories, town gossip, and the occasional goat in a sweater. Plus, get a free Jett Wilder song when you subscribe!</span></p>
+          <p><span style="font-size: 16px;">Join me in Snowball Falls for love stories, town gossip, and the occasional goat in a sweater. Plus, get a free Sawyer Nash song when you subscribe!</span></p>
 
         </div>
 
