@@ -26,3 +26,14 @@ title: Books
     </div>
   {% endfor %}
 </div>
+<div class="fb-page"
+  data-href="https://www.facebook.com/RobinBaylissBooks/"
+  data-tabs="Posts" data-width="" data-height=""
+  data-small-header="true" data-adapt-container-width="true"
+  data-hide-cover="true" data-show-facepile="false">
+  <blockquote cite="https://www.facebook.com/RobinBaylissBooks/" class="fb-xfbml-parse-ignore">
+    <a href="https://www.facebook.com/RobinBaylissBooks/">
+      Robin Bayliss Writes Cozy Christmas Love Stories
+    </a>
+  </blockquote>
+</div>
