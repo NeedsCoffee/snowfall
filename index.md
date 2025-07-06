@@ -29,7 +29,7 @@ title: Books
 
 <div class="facebook-feed-wrapper">
   <h2 class="section-title">Latest News</h2>
-  <div class="fb-page" data-href="https://www.facebook.com/RobinBaylissBooks/" data-tabs="timeline" data-width="" data-height=""
+  <div class="fb-page" data-href="https://www.facebook.com/RobinBaylissBooks/" data-tabs="timeline" data-width="800" data-height=""
     data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-lazy="true">
     <blockquote class="fb-xfbml-parse-ignore" cite="https://www.facebook.com/RobinBaylissBooks/">
       <a href="https://www.facebook.com/RobinBaylissBooks/">
