@@ -277,3 +277,24 @@ main {
         color: $color-button; // Use the theme's gold button color on hover
     }
 }
+
+/* --- Facebook Feed Styles --- */
+.facebook-feed-wrapper {
+  text-align: center; // Center the Facebook plugin
+  padding: 3rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-family: $font-title;
+  color: $color-button; // Use the gold button color
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+// This helps the responsive iframe behave correctly
+.fb-page, .fb-page span, .fb-page iframe {
+  width: 100% !important;
+  max-width: 500px; // A sensible max-width for a feed
+}
