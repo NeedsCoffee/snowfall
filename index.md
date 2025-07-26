@@ -27,9 +27,11 @@ title: Books
   {% endfor %}
 </div>
 
-<div>
-  <div>Want more snow-kissed romance? <a href="https://subscribepage.io/RobinBayliss" target="_blank">Join Robin's newsletter</a> for behind-the-scenes peeks and cat cameos 🐾</div>
-</div>
+<p class="newsletter-prompt">
+  Want more snow-kissed romance? 
+  <a href="https://subscribepage.io/RobinBayliss" target="_blank">Join Robin's newsletter</a> 
+  for behind-the-scenes peeks and cat cameos 🐾
+</p>
 
 <div class="facebook-feed-wrapper">
   <h2 class="section-title">Latest News</h2>
