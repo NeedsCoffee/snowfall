@@ -116,6 +116,15 @@ main {
     padding-bottom: 0.5rem;
 }
 
+.ku-subtitle {
+  font-family: $font-body;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: $color-button; /* Use the theme's gold color */
+  margin-top: 0.75rem; /* Add a little space above it */
+  letter-spacing: 0.5px; /* A touch of spacing for elegance */
+}
+
 // --- Book Grid ---
 .book-grid {
     display: grid;
