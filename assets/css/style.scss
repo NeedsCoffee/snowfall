@@ -298,3 +298,25 @@ main {
   width: 100% !important;
   max-width: 500px; // A sensible max-width for a feed
 }
+
+/* --- Newsletter Prompt Styles --- */
+.newsletter-prompt {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 550px; /* Keeps the line from getting too wide on large screens */
+  margin: 4rem auto; /* Adds space above and below, and centers the block */
+  color: rgba(255, 255, 255, 0.9); /* A slightly brighter white to stand out */
+}
+
+.newsletter-prompt a {
+  color: $color-button; /* Uses your theme's gold color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.newsletter-prompt a:hover {
+  color: $color-button-hover;
+  text-decoration: underline; /* Adds an underline on hover for clarity */
+}
