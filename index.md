@@ -6,7 +6,7 @@ title: Books
 <div class="site-title-container">
   <h1 class="site-title">Robin Bayliss</h1>
   <h2 class="series-title">Snowball Falls Series</h2>
-  <p class="ku-subtitle">Available in Kindle Unlimited</p>
+  <p class="ku-subtitle">Available on Kindle Unlimited</p>
 </div>
 
 <div class="book-grid">
