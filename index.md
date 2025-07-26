@@ -30,7 +30,7 @@ title: Books
 <p class="newsletter-prompt">
   Want more snow-kissed romance? 
   <a href="https://subscribepage.io/RobinBayliss" target="_blank">Join Robin's newsletter</a> 
-  for behind-the-scenes peeks and cat cameos <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 100 100" style="vertical-align: -0.15em; margin-left: 0.2em;"><text y=".9em" font-size="90" fill="#ffffff">🐾</text></svg>
+  for behind-the-scenes peeks and cat cameos <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 100 100" style="vertical-align: -0.15em; margin-left: 0.2em;"><text y=".9em" font-size="90" fill="#ffffff">&#xFE0E;</text></svg>
 </p>
 
 <div class="facebook-feed-wrapper">
