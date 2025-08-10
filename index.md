@@ -18,16 +18,18 @@ title: Books
       <div class="book-info">
         <h3>{{ book.info_title }}</h3>
         <p>{{ book.summary | newline_to_br }}</p>
-        {% if book.buy_now_url and book.buy_now_url != "" %}
-          <a href="{{ book.buy_now_url }}" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
-        {% else %}
+        <div class="button-group">
+          {% if book.url and book.url != "" %}
+          <a href="{{ book.url }}" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
+          {% else %}
           <span class="coming-soon-button">Coming Soon</span>
-        {% endif %}
-        {% if book.listen_now_url and book.listen_now_url != "" %}
-          <a href="{{ book.listen_now_url }}" class="buy-button" target="_blank" rel="noopener noreferrer">🎧 Listen Now</a>
-        {% else %}
-          <span class="coming-soon-button">🎧 Coming Soon</span>
-        {% endif %}
+          {% endif %}
+          {% if book.listen_now_url and book.listen_now_url != "" %}
+          <a href="{{ book.listen_now_url }}" class="listen-now-button" target="_blank" rel="noopener noreferrer">🎧 Listen Now</a>
+          {% else %}
+          <span class="audio-coming-soon-button">🎧 Coming Soon</span>
+          {% endif %}
+        </div>
       </div>
     </div>
   {% endfor %}
