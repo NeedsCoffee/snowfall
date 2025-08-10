@@ -170,6 +170,15 @@ main {
     }
 }
 
+.button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;    /* Center them horizontally */
+    gap: 0.75rem;           /* Create space between the buttons */
+    margin-top: auto;       /* Pushes buttons to the bottom of the card info */
+    padding-top: 1rem;      /* Ensures space above the top button */
+}
+
 .buy-button {
     display: inline-block;
     background-color: $color-button;
@@ -196,6 +205,20 @@ main {
     cursor: default; /* Shows the default cursor, not a hand pointer */
 }
 
+.listen-now-button {
+    display: inline-block;
+    background-color: #5c554e; /* Use the dark text color for a secondary look */
+    color: white;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.listen-now-button:hover {
+    background-color: #4a443e; /* A slightly lighter hover state */
+}
 
 // --- About Page Styles ---
 .about-container {
