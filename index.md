@@ -23,6 +23,11 @@ title: Books
         {% else %}
           <span class="coming-soon-button">Coming Soon</span>
         {% endif %}
+        {% if book.listen_now_url and book.listen_now_url != "" %}
+          <a href="{{ book.listen_now_url }}" class="buy-button" target="_blank" rel="noopener noreferrer">🎧 Listen Now</a>
+        {% else %}
+          <span class="coming-soon-button">🎧 Coming Soon</span>
+        {% endif %}
       </div>
     </div>
   {% endfor %}
