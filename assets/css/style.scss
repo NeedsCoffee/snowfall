@@ -194,15 +194,16 @@ main {
     }
 }
 
-.coming-soon-button {
-    display: inline-block;
-    background-color: #5a6673; /* A muted, disabled grey */
-    color: rgba(255, 255, 255, 0.7);
-    padding: 0.75rem 2rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: default; /* Shows the default cursor, not a hand pointer */
+.coming-soon-button,
+.audio-coming-soon-button {
+  display: inline-block;
+  background-color: #5a6673; /* A muted, disabled grey */
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: default; /* Shows the default cursor, not a hand pointer */
 }
 
 .listen-now-button {
