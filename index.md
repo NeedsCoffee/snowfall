@@ -27,7 +27,7 @@ title: Books
           {% if book.listen_now_url and book.listen_now_url != "" %}
           <a href="{{ book.listen_now_url }}" class="listen-now-button" target="_blank" rel="noopener noreferrer">🎧 Listen Now</a>
           {% else %}
-          <span class="audio-coming-soon-button">🎧 Coming Soon</span>
+          <span class="audio-coming-soon-button">🎧 Listen Soon</span>
           {% endif %}
         </div>
       </div>
