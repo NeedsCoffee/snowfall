@@ -183,7 +183,7 @@ main {
 .listen-now-button {
     display: inline-block;
     background-color: $color-button; /* The dark text color for high contrast */
-    color: white;
+    color: black;
     padding: 0.75rem 2rem;
     text-decoration: none;
     border-radius: 4px;
@@ -196,7 +196,7 @@ main {
 .buy-button:hover,
 .listen-now-button:hover {
     background-color: $color-button-hover; /* A consistent hover state */
-    color: black;
+    color: white;
 }
 
 .coming-soon-button,
