@@ -7,9 +7,9 @@ $font-title: 'Dancing Script', cursive;
 $font-body: 'Lora', serif;
 $color-background: #2b3a4a; // A deep, dark slate blue
 $color-text: #fdfaf3;       // The original cream color, now used for text
-$color-heading: #c0d4d2;    // This warm red still works well
-$color-button: #c84b31;
-$color-button-hover: #d02f2c;
+$color-heading: #c84b31;    // This warm red still works well
+$color-button: #d02f2c;
+$color-button-hover: #c0d4d2;
 
 // --- Base Styles ---
 html {
@@ -183,7 +183,7 @@ main {
 .listen-now-button {
     display: inline-block;
     background-color: $color-button; /* The dark text color for high contrast */
-    color: white;
+    color: $color-button-hover;
     padding: 0.75rem 2rem;
     text-decoration: none;
     border-radius: 4px;
@@ -196,7 +196,7 @@ main {
 .buy-button:hover,
 .listen-now-button:hover {
     background-color: $color-button-hover; /* A consistent hover state */
-    color: black;
+    color: $color-button;
 }
 
 .coming-soon-button,
