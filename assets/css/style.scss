@@ -179,18 +179,23 @@ main {
     padding-top: 1rem;      /* Ensures space above the top button */
 }
 
-.buy-button {
+.buy-button,
+.listen-now-button {
     display: inline-block;
-    background-color: $color-button;
-    color: #4a443e; /* Changed from white to a high-contrast dark brown */
+    background-color: #5c554e; /* The dark text color for high contrast */
+    color: white;
     padding: 0.75rem 2rem;
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
     transition: background-color 0.2s;
-    &:hover {
-        background-color: $color-button-hover;
-    }
+    min-width: 180px; /* Ensures buttons have a similar width for alignment */
+    text-align: center;
+}
+
+.buy-button:hover,
+.listen-now-button:hover {
+    background-color: #4a443e; /* A consistent hover state */
 }
 
 .coming-soon-button,
@@ -203,21 +208,6 @@ main {
   border-radius: 4px;
   font-weight: bold;
   cursor: default; /* Shows the default cursor, not a hand pointer */
-}
-
-.listen-now-button {
-    display: inline-block;
-    background-color: #5c554e; /* Use the dark text color for a secondary look */
-    color: white;
-    padding: 0.75rem 2rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-
-.listen-now-button:hover {
-    background-color: #4a443e; /* A slightly lighter hover state */
 }
 
 // --- About Page Styles ---
