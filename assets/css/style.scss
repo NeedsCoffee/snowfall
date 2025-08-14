@@ -182,13 +182,12 @@ main {
 .buy-button {
     display: inline-block;
     background-color: $color-button;
-    color: white;
+    color: #4a443e; /* Changed from white to a high-contrast dark brown */
     padding: 0.75rem 2rem;
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
     transition: background-color 0.2s;
-
     &:hover {
         background-color: $color-button-hover;
     }
