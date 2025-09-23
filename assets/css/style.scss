@@ -399,6 +399,16 @@ main {
     margin-bottom: 1rem;
     line-height: 1.1;
 
+    a { /* Styling for the clickable title */
+        color: $color-heading;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            color: lighten($color-heading, 10%); /* Slightly lighter on hover */
+        }
+    }
+
     @media (max-width: 576px) {
       font-size: 2.2rem;
     }
@@ -438,4 +448,8 @@ main {
       }
     }
   }
+}
+
+.collection-buy-button {
+  margin-top: 1.5rem; /* Add some space above the button */
 }

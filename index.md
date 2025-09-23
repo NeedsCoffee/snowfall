@@ -11,10 +11,12 @@ title: Books
 
 <div class="collection-intro">
   <div class="collection-image">
-    <img src="{{ '/assets/images/collection-1-3.png' | relative_url }}" alt="Snowball Falls Collection Books 1-3">
+    <a href="https://amzn.to/3IyiW8f" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/assets/images/collection-1-3.jpg' | relative_url }}" alt="Snowball Falls Collection Books 1-3">
+    </a>
   </div>
   <div class="collection-text">
-    <h2>The Snowball Falls Collection: Books 1-3</h2>
+    <h2><a href="https://amzn.to/3IyiW8f" target="_blank" rel="noopener noreferrer">The Snowball Falls Collection: Books 1-3</a></h2>
     <p>Three swoony, laugh-out-loud Christmas romances set in the most magical small town in New Hampshire.</p>
     <ul>
       <li><strong>Snowed In With the Grump</strong> - A glitter-obsessed kindergarten teacher gets snowed in with a grumpy carpenter, and sparks fly hotter than the firewood.</li>
@@ -22,6 +24,7 @@ title: Books
       <li><strong>Merry Matchmaking</strong> - A photographer returns home only to be paired with her veterinarian ex in the town’s holiday dating scheme, where old flames refuse to die.</li>
     </ul>
     <p>Curl up with cocoa and binge the first three Snowball Falls romances today, because in this town, happily-ever-after is always in season.</p>
+    <a href="https://amzn.to/3IyiW8f" class="buy-button collection-buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
   </div>
 </div>
 
