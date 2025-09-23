@@ -349,3 +349,93 @@ main {
 .newsletter-icon text {
   fill: #ffffff;
 }
+
+/* --- New Collection Intro Section Styles --- */
+.collection-intro {
+  display: flex;
+  align-items: flex-start; /* Aligns content to the top */
+  gap: 3rem;
+  margin-bottom: 4rem; /* Space below the new section */
+  padding: 2rem;
+  background-color: #3b4d61; /* Slightly lighter background for the section */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.collection-image {
+  flex-shrink: 0; /* Prevents the image from shrinking */
+  width: 300px; /* Fixed width for the image container */
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  @media (max-width: 900px) {
+    width: 70%; /* Adjust image width for smaller screens */
+    max-width: 300px;
+  }
+  @media (max-width: 576px) {
+    width: 90%;
+  }
+}
+
+.collection-text {
+  flex-grow: 1; /* Allows text to take remaining space */
+
+  h2 {
+    font-family: $font-title;
+    color: $color-heading;
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+
+    @media (max-width: 576px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin-bottom: 1.5rem;
+    text-align: left; /* Align list items to the left */
+
+    @media (max-width: 900px) {
+        text-align: center; /* Center list items on smaller screens */
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 1.5rem; /* Space for custom bullet */
+
+      &::before {
+        content: '❄️'; /* Custom snowflake bullet */
+        color: $color-heading;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      strong {
+        color: $color-button-hover; /* Highlight book titles */
+      }
+    }
+  }
+}

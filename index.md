@@ -9,6 +9,22 @@ title: Books
   <p class="ku-subtitle">Available on Kindle Unlimited</p>
 </div>
 
+<div class="collection-intro">
+  <div class="collection-image">
+    <img src="{{ '/assets/images/collection-1-3.png' | relative_url }}" alt="Snowball Falls Collection Books 1-3">
+  </div>
+  <div class="collection-text">
+    <h2>The Snowball Falls Collection: Books 1-3</h2>
+    <p>Three swoony, laugh-out-loud Christmas romances set in the most magical small town in New Hampshire.</p>
+    <ul>
+      <li><strong>Snowed In With the Grump</strong> - A glitter-obsessed kindergarten teacher gets snowed in with a grumpy carpenter, and sparks fly hotter than the firewood.</li>
+      <li><strong>Mistletoe and Mayhem</strong> - An event planner’s perfect Christmas festival is derailed when her brewery-owning nemesis crashes the party. and one fake engagement changes everything.</li>
+      <li><strong>Merry Matchmaking</strong> - A photographer returns home only to be paired with her veterinarian ex in the town’s holiday dating scheme, where old flames refuse to die.</li>
+    </ul>
+    <p>Curl up with cocoa and binge the first three Snowball Falls romances today, because in this town, happily-ever-after is always in season.</p>
+  </div>
+</div>
+
 <div class="book-grid">
   {% for book in site.data.books %}
     <div class="book-card">
