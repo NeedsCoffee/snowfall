@@ -12,7 +12,7 @@ title: Books
 <div class="collection-intro">
   <div class="collection-image">
     <a href="https://amzn.to/3IyiW8f" target="_blank" rel="noopener noreferrer">
-      <img src="{{ '/assets/images/collection-1-3.jpg' | relative_url }}" alt="Snowball Falls Collection Books 1-3">
+      <img src="{{ '/assets/images/collection-1-3.png' | relative_url }}" alt="Snowball Falls Collection Books 1-3">
     </a>
   </div>
   <div class="collection-text">
