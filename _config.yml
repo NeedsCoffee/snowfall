@@ -1,0 +1,15 @@
+# Site settings
+title: Robin Bayliss
+description: "The official website for romance author Robin Bayliss and her Snowball Falls Series."
+url: "https://robinbayliss.com"
+baseurl: "/"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Sass settings
+sass:
+  sass_dir: assets/css
+  style: compressed
