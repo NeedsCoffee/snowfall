@@ -108,20 +108,20 @@ main {
 .series-title {
     font-family: $font-title;
     color: $color-text; // Changed from $color-heading
-    font-size: 2.5rem;
-    margin: 0.5rem 0 0 0;
+    font-size: 3.5rem;
+    margin: 0.75rem 0 0 0;
     font-weight: 700;
-    border-bottom: 2px solid $color-button;
+    border-bottom: 4px solid $color-heading;
     display: inline-block;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
 }
 
 .ku-subtitle {
   font-family: $font-body;
   font-style: italic;
-  font-size: 1.3rem;
-  color: $color-button; /* Use the theme's gold color */
-  margin-top: 0.75rem; /* Add a little space above it */
+  font-size: 1.5rem; /* Increased size */
+  color: $color-text; /* Changed color to white/cream for visibility */
+  margin-top: 1.5rem; /* Added more space above it */
   letter-spacing: 0.5px; /* A touch of spacing for elegance */
 }
 
