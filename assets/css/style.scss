@@ -125,6 +125,15 @@ main {
   letter-spacing: 0.5px; /* A touch of spacing for elegance */
 }
 
+.series-welcome-text {
+    font-family: $font-body;
+    font-size: 1.1rem;
+    color: $color-text; /* Set to white/cream color */
+    margin: 1.5rem auto 3rem auto; /* Top, Right/Left (centered), Bottom margin */
+    max-width: 600px; /* Limits the line length for readability */
+    line-height: 1.6;
+}
+
 // --- Book Grid ---
 .book-grid {
     display: grid;
@@ -160,7 +169,14 @@ main {
     h3 {
         font-size: 1.5rem;
         font-weight: 700;
-        margin: 0 0 0.5rem 0;
+        margin: 0 0 0.25rem 0; /* Reduced bottom margin */
+    }
+
+    .book-subtitle { /* NEW Subtitle style */
+        font-size: 0.95rem;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.75); /* A slightly dimmer white */
+        margin: 0 0 1rem 0; /* Spacing between subtitle and summary */
     }
 
     p {
@@ -351,6 +367,12 @@ main {
 }
 
 /* --- New Collection Intro Section Styles --- */
+.section-title-container { /* New style for the "Get the Collections" header */
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
 .collection-intro {
   display: flex;
   align-items: flex-start; /* Aligns content to the top */

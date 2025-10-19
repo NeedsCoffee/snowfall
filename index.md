@@ -7,25 +7,7 @@ title: Books
   <h1 class="site-title">Robin Bayliss</h1>
   <h2 class="series-title">Snowball Falls Series</h2>
   <p class="ku-subtitle">Available on Kindle Unlimited</p>
-</div>
-
-<div class="collection-intro">
-  <div class="collection-image">
-    <a href="https://amzn.to/3IyiW8f" target="_blank" rel="noopener noreferrer">
-      <img src="{{ '/assets/images/collection-1-3.png' | relative_url }}" alt="Snowball Falls Collection Books 1-3">
-    </a>
-  </div>
-  <div class="collection-text">
-    <h2><a href="https://amzn.to/3IyiW8f" target="_blank" rel="noopener noreferrer">The Snowball Falls Collection: Books 1-3</a></h2>
-    <p>Three swoony, laugh-out-loud Christmas romances set in the most magical small town in New Hampshire.</p>
-    <ul>
-      <li><strong>Snowed In With the Grump</strong> - A glitter-obsessed kindergarten teacher gets snowed in with a grumpy carpenter, and sparks fly hotter than the firewood.</li>
-      <li><strong>Mistletoe and Mayhem</strong> - An event planner’s perfect Christmas festival is derailed when her brewery-owning nemesis crashes the party. and one fake engagement changes everything.</li>
-      <li><strong>Merry Matchmaking</strong> - A photographer returns home only to be paired with her veterinarian ex in the town’s holiday dating scheme, where old flames refuse to die.</li>
-    </ul>
-    <p>Curl up with cocoa and binge the first three Snowball Falls romances today, because in this town, happily-ever-after is always in season.</p>
-    <a href="https://amzn.to/3IyiW8f" class="buy-button collection-buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
-  </div>
+  <p class="series-welcome-text">Welcome to Snowball Falls, a small town where cocoa, love, and Christmas miracles collide. Every story brings new love, old gossip, and one more reason to believe in happy endings.</p>
 </div>
 
 <div class="book-grid">
@@ -36,6 +18,9 @@ title: Books
       </div>
       <div class="book-info">
         <h3>{{ book.info_title }}</h3>
+        {% if book.subtitle %}
+        <p class="book-subtitle">{{ book.subtitle }}</p>
+        {% endif %}
         <p>{{ book.summary | newline_to_br }}</p>
         <div class="button-group">
           {% if book.buy_now_url and book.buy_now_url != "" %}
@@ -53,6 +38,74 @@ title: Books
     </div>
   {% endfor %}
 </div>
+
+<!-- Start of Collection Section -->
+<div class="section-title-container">
+    <h2 class="section-title">Get the Collections</h2>
+</div>
+
+<div class="collection-container">
+  
+  <!-- Collection 1: Books 1-3 -->
+  <div class="collection-intro">
+    <div class="collection-image">
+      <a href="https://amzn.to/3WF8krA" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/images/collection-1-3-v2.png' | relative_url }}" alt="Snowball Falls Collection Books 1-3">
+      </a>
+    </div>
+    <div class="collection-text">
+      <h2><a href="https://amzn.to/3WF8krA" target="_blank" rel="noopener noreferrer">The Snowball Falls Collection: Books 1–3</a></h2>
+      <p>Three swoony, laugh-out-loud Christmas romances set in the most magical small town in New Hampshire.</p>
+      <ul>
+        <li><strong>Snowed in With the Grump:</strong> A Grumpy Sunshine Christmas Romance</li>
+        <li><strong>Mistletoe and Mayhem:</strong> A Fake Relationship Christmas Romance</li>
+        <li><strong>Merry Matchmaking:</strong> A Second Chance Christmas Romance</li>
+      </ul>
+      <p>Curl up with cocoa and binge the first three Snowball Falls romances today, because in this town, happily-ever-after is always in season.</p>
+      <a href="https://amzn.to/3WF8krA" class="buy-button collection-buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Collection 2: Books 4-6 -->
+  <div class="collection-intro">
+    <div class="collection-image">
+      <a href="https://amzn.to/4he3s6v" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/images/collection-4-6.png' | relative_url }}" alt="Snowball Falls Collection Books 4-6">
+      </a>
+    </div>
+    <div class="collection-text">
+      <h2><a href="https://amzn.to/4he3s6v" target="_blank" rel="noopener noreferrer">The Snowball Falls Collection: Books 4–6</a></h2>
+      <p>Dive back into Snowball Falls for more laugh-out-loud, cozy Christmas romance.</p>
+      <ul>
+        <li><strong>Mistletoe and Mobsters:</strong> A Sweet Mafia Christmas Romance</li>
+        <li><strong>Reindeer Games:</strong> A Sweet Firefighter Christmas Romance</li>
+        <li><strong>Wish on the Winter Star:</strong> A Sweet Royal Christmas Romance</li>
+      </ul>
+      <p>Three more heartwarming stories from the town where the snow is always falling and the happy endings are guaranteed.</p>
+      <a href="https://amzn.to/4he3s6v" class="buy-button collection-buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Collection 3: Books 7-9 -->
+  <div class="collection-intro">
+    <div class="collection-image">
+      <img src="{{ '/assets/images/collection-7-9.png' | relative_url }}" alt="Snowball Falls Collection Books 7-9">
+    </div>
+    <div class="collection-text">
+      <h2>The Snowball Falls Collection: Books 7–9</h2>
+      <p>The latest installment in the Snowball Falls series. Prepare for more holiday chaos and swoon-worthy romance.</p>
+      <ul>
+        <li><strong>Deck the Halls with Daddy Issues:</strong> A Single Dad Christmas Romance</li>
+        <li><strong>The Holiday Switch:</strong> A Twin Swap Christmas Romance</li>
+        <li><strong>Mistaken Under the Mistletoe:</strong> A Secret Celebrity Christmas Romance</li>
+      </ul>
+      <p>Stay tuned for details on how to get the final three stories in the series!</p>
+      <span class="coming-soon-button collection-buy-button">Available Soon</span>
+    </div>
+  </div>
+
+</div>
+<!-- End of Collection Section -->
 
 <p class="newsletter-prompt">
   Want more snow-kissed romance? 
