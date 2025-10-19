@@ -69,12 +69,12 @@ title: Books
   <!-- Collection 2: Books 4-6 -->
   <div class="collection-intro">
     <div class="collection-image">
-      <a href="https://amzn.to/4he3s6v" target="_blank" rel="noopener noreferrer">
+      <a href="https://amzn.to/3Lk0RM8" target="_blank" rel="noopener noreferrer">
         <img src="{{ '/assets/images/collection-4-6.png' | relative_url }}" alt="Snowball Falls Collection Books 4-6">
       </a>
     </div>
     <div class="collection-text">
-      <h2><a href="https://amzn.to/4he3s6v" target="_blank" rel="noopener noreferrer">The Snowball Falls Collection: Books 4–6</a></h2>
+      <h2><a href="https://amzn.to/3Lk0RM8" target="_blank" rel="noopener noreferrer">The Snowball Falls Collection: Books 4–6</a></h2>
       <p>Dive back into Snowball Falls for more laugh-out-loud, cozy Christmas romance.</p>
       <ul>
         <li><strong>Mistletoe and Mobsters:</strong> A Sweet Mafia Christmas Romance</li>
