@@ -99,8 +99,8 @@ title: Books
         <li><strong>The Holiday Switch:</strong> A Twin Swap Christmas Romance</li>
         <li><strong>Mistaken Under the Mistletoe:</strong> A Secret Celebrity Christmas Romance</li>
       </ul>
-      <p>Stay tuned for details on how to get the final three stories in the series!</p>
-      <span class="coming-soon-button collection-buy-button">Available Soon</span>
+      <p>The final three stories in the series!</p>
+      <a href="https://amzn.to/4nJGeXe" class="buy-button collection-buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
     </div>
   </div>
 
