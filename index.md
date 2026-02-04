@@ -10,7 +10,7 @@ title: Books
   <p class="series-welcome-text">Welcome to Snowball Falls, a small town where cocoa, love, and Christmas miracles collide. Every story brings new love, old gossip, and one more reason to believe in happy endings.</p>
 </div>
 
-<div class="season-section">
+<div class="season-section" id="season-1">
   <h2 class="season-title">Season 1</h2>
   <div class="book-grid">
     {% for book in site.data.books %}
@@ -48,7 +48,7 @@ title: Books
   </div>
 </div>
 
-<div class="season-section">
+<div class="season-section" id="season-2">
   <h2 class="season-title">Season 2</h2>
   <div class="book-grid">
     {% for book in site.data.books %}
@@ -87,7 +87,7 @@ title: Books
 </div>
 
 <!-- Start of Collection Section -->
-<div class="section-title-container">
+<div class="section-title-container" id="collections">
     <h2 class="section-title">Get the Collections</h2>
 </div>
 
