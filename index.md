@@ -10,33 +10,80 @@ title: Books
   <p class="series-welcome-text">Welcome to Snowball Falls, a small town where cocoa, love, and Christmas miracles collide. Every story brings new love, old gossip, and one more reason to believe in happy endings.</p>
 </div>
 
-<div class="book-grid">
-  {% for book in site.data.books %}
-    <div class="book-card">
-      <div class="book-cover">
-        <img src="{{ '/assets/images/' | append: book.cover_image | relative_url }}" alt="{{ book.title }} book cover">
-      </div>
-      <div class="book-info">
-        <h3>{{ book.info_title }}</h3>
-        {% if book.subtitle %}
-        <p class="book-subtitle">{{ book.subtitle }}</p>
-        {% endif %}
-        <p>{{ book.summary | newline_to_br }}</p>
-        <div class="button-group">
-          {% if book.buy_now_url and book.buy_now_url != "" %}
-          <a href="{{ book.buy_now_url }}" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
+<div class="season-section">
+  <h2 class="season-title">Season 1</h2>
+  <div class="book-grid">
+    {% for book in site.data.books %}
+      {% if book.season == 1 %}
+      <div class="book-card">
+        <div class="book-cover">
+          {% if book.cover_image and book.cover_image != "" %}
+          <img src="{{ '/assets/images/' | append: book.cover_image | relative_url }}" alt="{{ book.info_title }} book cover">
           {% else %}
-          <span class="coming-soon-button">Coming Soon</span>
-          {% endif %}
-          {% if book.listen_now_url and book.listen_now_url != "" %}
-          <a href="{{ book.listen_now_url }}" class="listen-now-button" target="_blank" rel="noopener noreferrer">🎧 Listen Now</a>
-          {% else %}
-          <span class="audio-coming-soon-button">🎧 Listen Soon</span>
+          <div class="book-cover-placeholder">Cover Coming Soon</div>
           {% endif %}
         </div>
+        <div class="book-info">
+          <h3>{{ book.info_title }}</h3>
+          {% if book.subtitle %}
+          <p class="book-subtitle">{{ book.subtitle }}</p>
+          {% endif %}
+          <p>{{ book.summary | newline_to_br }}</p>
+          <div class="button-group">
+            {% if book.buy_now_url and book.buy_now_url != "" %}
+            <a href="{{ book.buy_now_url }}" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
+            {% else %}
+            <span class="coming-soon-button">Coming Soon</span>
+            {% endif %}
+            {% if book.listen_now_url and book.listen_now_url != "" %}
+            <a href="{{ book.listen_now_url }}" class="listen-now-button" target="_blank" rel="noopener noreferrer">🎧 Listen Now</a>
+            {% else %}
+            <span class="audio-coming-soon-button">🎧 Listen Soon</span>
+            {% endif %}
+          </div>
+        </div>
       </div>
-    </div>
-  {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="season-section">
+  <h2 class="season-title">Season 2</h2>
+  <div class="book-grid">
+    {% for book in site.data.books %}
+      {% if book.season == 2 %}
+      <div class="book-card">
+        <div class="book-cover">
+          {% if book.cover_image and book.cover_image != "" %}
+          <img src="{{ '/assets/images/' | append: book.cover_image | relative_url }}" alt="{{ book.info_title }} book cover">
+          {% else %}
+          <div class="book-cover-placeholder">Cover Coming Soon</div>
+          {% endif %}
+        </div>
+        <div class="book-info">
+          <h3>{{ book.info_title }}</h3>
+          {% if book.subtitle %}
+          <p class="book-subtitle">{{ book.subtitle }}</p>
+          {% endif %}
+          <p>{{ book.summary | newline_to_br }}</p>
+          <div class="button-group">
+            {% if book.buy_now_url and book.buy_now_url != "" %}
+            <a href="{{ book.buy_now_url }}" class="buy-button" target="_blank" rel="noopener noreferrer">Buy Now</a>
+            {% else %}
+            <span class="coming-soon-button">Coming Soon</span>
+            {% endif %}
+            {% if book.listen_now_url and book.listen_now_url != "" %}
+            <a href="{{ book.listen_now_url }}" class="listen-now-button" target="_blank" rel="noopener noreferrer">🎧 Listen Now</a>
+            {% else %}
+            <span class="audio-coming-soon-button">🎧 Listen Soon</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 <!-- Start of Collection Section -->
