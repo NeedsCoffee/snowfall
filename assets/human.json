@@ -1,0 +1,22 @@
+{
+  "version": "0.1.1",
+  "url": "https://robinbayliss.com/",
+  "vouches": [
+    {
+      "url": "https://cericlark.com/",
+      "vouched_at": "2026-03-10"
+    },
+    {
+      "url": "https://lycanbooks.com/",
+      "vouched_at": "2026-03-10"
+    },
+    {
+      "url": "https://myrddinpublishing.com/",
+      "vouched_at": "2026-03-10"
+    },
+    {
+      "url": "https://embernyxbooks.com/",
+      "vouched_at": "2026-03-10"
+    }
+  ]
+}
