@@ -2,9 +2,6 @@
 # This empty front matter is required for Sass to be processed by Jekyll
 ---
 
-@use "sass:color";
-@use "sass:math";
-
 // --- Font and Color Variables ---
 $font-title: 'Dancing Script', cursive;
 $font-body: 'Lora', serif;
@@ -57,10 +54,10 @@ main {
 // Positioning each snowflake randomly
 @for $i from 1 through 12 {
     .snowflake:nth-child(#{$i}) {
-        left: math.percentage(math.random());
-        animation-duration: (10s + math.random(10) * 1s);
-        animation-delay: (math.random(10) * -1s);
-        font-size: (1rem + math.random(10) * 0.1rem);
+        left: percentage(random());
+        animation-duration: (10s + random(10) * 1s);
+        animation-delay: (random(10) * -1s);
+        font-size: (1rem + random(10) * 0.1rem);
     }
 }
 
@@ -477,7 +474,7 @@ main {
         transition: color 0.2s;
 
         &:hover {
-            color: color.adjust($color-heading, $lightness: 10%); /* Slightly lighter on hover */
+            color: lighten($color-heading, 10%); /* Slightly lighter on hover */
         }
     }
 
