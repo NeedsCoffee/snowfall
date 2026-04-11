@@ -7,6 +7,7 @@ title: Books
   <h1 class="site-title">Robin Bayliss</h1>
   <h2 class="series-title">Snowball Falls Series</h2>
   <p class="ku-subtitle">Available on Kindle Unlimited</p>
+  <p class="ku-subtitle">Prefer to borrow books? <a class="homepage-library-link" href="{{ '/library/' | relative_url }}">Read Robin Bayliss free through your local library.</a></p>
   <p class="series-welcome-text">Welcome to Snowball Falls, a small town where cocoa, love, and Christmas miracles collide. Every story brings new love, old gossip, and one more reason to believe in happy endings.</p>
 </div>
 
