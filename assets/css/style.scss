@@ -131,6 +131,21 @@ main {
   letter-spacing: 0.5px; /* A touch of spacing for elegance */
 }
 
+
+.homepage-library-link,
+.homepage-library-link:visited {
+  color: $color-button;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.homepage-library-link:hover {
+  color: $color-button-hover;
+  text-decoration: underline;
+}
+
+
 .series-welcome-text {
     font-family: $font-body;
     font-size: 1.1rem;
