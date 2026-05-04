@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "snowfall-contact-form",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-05-04",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "secrets": {
+    "required": ["CONTACT_FROM_EMAIL", "CONTACT_TO_EMAIL"]
+  },
+  "vars": {
+    "ALLOWED_ORIGINS": "https://robinbayliss.com,https://www.robinbayliss.com,https://api.robinbayliss.com",
+    "CONTACT_FROM_NAME": "Robin Bayliss Website",
+    "SUCCESS_URL": "https://robinbayliss.com/contact-thanks/"
+  },
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "remote": true,
+      "allowed_sender_addresses": [
+        "no-reply@robinbayliss.com"
+      ]
+    }
+  ]
+}

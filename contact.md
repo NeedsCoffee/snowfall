@@ -23,16 +23,24 @@ title: Contact The Author
 
   <section class="contact-form-panel">
     <h2>Message Robin</h2>
-    <p class="contact-status">Form status: placeholder only for now.</p>
-    <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
+    <p class="contact-status">Form status: live once the Cloudflare Worker is deployed on <code>{{ site.contact_form_endpoint }}</code>.</p>
+    <form class="contact-form" action="{{ site.contact_form_endpoint }}" method="POST">
       <label for="contact-name">Your Name</label>
       <input id="contact-name" type="text" name="name" required>
 
       <label for="contact-email">Your Email</label>
-      <input id="contact-email" type="email" name="_replyto" required>
+      <input id="contact-email" type="email" name="email" required>
+
+      <label for="contact-subject">Subject</label>
+      <input id="contact-subject" type="text" name="subject" maxlength="120" placeholder="What would you like to chat about?">
 
       <label for="contact-message">Message</label>
       <textarea id="contact-message" name="message" rows="7" required></textarea>
+
+      <div class="contact-honeypot" aria-hidden="true">
+        <label for="contact-website">Website</label>
+        <input id="contact-website" type="text" name="website" tabindex="-1" autocomplete="off">
+      </div>
 
       <button type="submit">Send</button>
     </form>

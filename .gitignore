@@ -8,3 +8,8 @@ _site/
 .sass-cache/
 .bundle/
 vendor/bundle/
+node_modules/
+workers/*/.wrangler/
+workers/*/dist/
+workers/*/.dev.vars
+workers/*/.env

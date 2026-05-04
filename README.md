@@ -109,6 +109,16 @@ Typical uses:
 - The site currently uses Google Fonts loaded in [_layouts/default.html](/c:/Projects/snowfall/_layouts/default.html:1).
 - Jekyll compiles Sass automatically during `serve` and `build`.
 
+## Contact Form Worker
+
+The site contact form now targets a Cloudflare Worker endpoint at `https://api.robinbayliss.com`.
+
+- Jekyll form markup lives in [contact.md](/c:/Projects/snowfall/contact.md:1)
+- Worker code lives in [workers/contact-form/src/index.ts](/c:/Projects/snowfall/workers/contact-form/src/index.ts:1)
+- Worker config lives in [workers/contact-form/wrangler.jsonc](/c:/Projects/snowfall/workers/contact-form/wrangler.jsonc:1)
+
+Deploy the Worker after replacing the placeholder email values in `workers/contact-form/wrangler.jsonc`.
+
 ## Git Notes
 
 Ignored local artifacts are defined in [`.gitignore`](/c:/Projects/snowfall/.gitignore:1), including:

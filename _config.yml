@@ -3,6 +3,7 @@ title: Robin Bayliss
 description: "The official website for romance author Robin Bayliss and her Snowball Falls Series."
 url: "https://robinbayliss.com"
 baseurl: "/"
+contact_form_endpoint: "https://api.robinbayliss.com"
 
 # Build settings
 theme: minima
