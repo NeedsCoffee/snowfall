@@ -7,6 +7,8 @@
   buy_now_url: "https://books2read.com/SnowedinWiththeGrump"
   listen_now_url: "https://elevenreader.io/audiobooks/snowed-in-with-the-grump/5ZzYdBwBy4cVG00JtkxA"
   season: 1
+  categories:
+    - "grumpy-guarded"
 -
   cover_image: "2-mistletoe-and-mayhem-2.jpg"
   overlay_title: "Mistletoe\nand\nMayhem"
@@ -16,6 +18,8 @@
   buy_now_url: "https://books2read.com/MayhemRobinBayliss"
   listen_now_url: "https://elevenreader.io/audiobooks/mistletoe-and-mayhem/iMgncYZgKyjEFrxr3kIA"
   season: 1
+  categories:
+    - "grumpy-guarded"
 -
   cover_image: "3-merry-matchmaking-2.jpg"
   overlay_title: "Merry\nMatchmaking"
@@ -25,6 +29,8 @@
   buy_now_url: "https://books2read.com/MerryMatchmaking"
   listen_now_url: "https://elevenreader.io/audiobooks/merry-matchmaking/09d8C2GpT0bX8TjXfRpO"
   season: 1
+  categories:
+    - "sweet-second-chances"
 -
   cover_image: "4-mistletoe-and-mobsters-2.jpg"
   overlay_title: "Mistletoe\nand\nMobsters"
@@ -34,6 +40,8 @@
   buy_now_url: "https://books2read.com/Mobsters"
   listen_now_url: "https://elevenreader.io/audiobooks/mistletoe-and-mobsters/85S0fRypgbXAqXk0zgOJ"
   season: 1
+  categories:
+    - "heroes-in-uniform"
 -
   cover_image: "5-reindeer-games-2.jpg"
   overlay_title: "Reindeer\nGames"
@@ -43,6 +51,8 @@
   buy_now_url: "https://books2read.com/u/bWOG2x"
   listen_now_url: ""
   season: 1
+  categories:
+    - "heroes-in-uniform"
 -
   cover_image: "6-a-wish-on-the-winter-star-2.jpg"
   overlay_title: "A Wish on\nthe\nWinter Star"
@@ -52,6 +62,8 @@
   buy_now_url: "https://books2read.com/u/mKOVgy"
   listen_now_url: ""
   season: 1
+  categories:
+    - "secret-identities"
 -
   cover_image: "7-deck-the-halls-with-daddy-issues-3.jpg"
   overlay_title: "Deck the Halls\nwith\nDaddy Issues"
@@ -61,6 +73,8 @@
   buy_now_url: "https://books2read.com/u/bPrL5Y"
   listen_now_url: ""
   season: 1
+  categories:
+    - "grumpy-guarded"
 -
   cover_image: "8-the-holiday-switch-2.jpg"
   overlay_title: "Holiday\nSwitch"
@@ -70,6 +84,8 @@
   buy_now_url: "https://books2read.com/u/b5nWxO"
   listen_now_url: ""
   season: 1
+  categories:
+    - "great-twin-swap"
 -
   cover_image: "9-mistaken-under-the-mistletoe-2.jpg"
   overlay_title: "Mistaken\nunder the\nMistletoe"
@@ -79,6 +95,8 @@
   buy_now_url: "https://books2read.com/u/bpvprJ"
   listen_now_url: ""
   season: 1
+  categories:
+    - "secret-identities"
 -
   cover_image: "10-the-billionaires-holiday-fix.jpg"
   overlay_title: "The Billionaire's\nHoliday Fix"
@@ -88,6 +106,9 @@
   buy_now_url: "https://books2read.com/u/bOgARN"
   listen_now_url: ""
   season: 2
+  categories:
+    - "new-in"
+    - "great-twin-swap"
 -
   cover_image: ""
   overlay_title: "Lake\nMittens"
@@ -97,3 +118,5 @@
   buy_now_url: ""
   listen_now_url: ""
   season: 2
+  categories:
+    - "sweet-second-chances"

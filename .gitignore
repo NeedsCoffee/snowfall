@@ -3,3 +3,8 @@ originalPhotos/
 .codex/
 .repowise/
 .vscode/
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+vendor/bundle/
