@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Rock+Salt&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}" />
     <link rel="human-json" href="/assets/human.json" />
+    {% if page.url == '/contact.html' %}
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    {% endif %}
 </head>
 <body>
     <div id="fb-root"></div><script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v23.0"></script>

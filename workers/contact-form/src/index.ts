@@ -1,10 +1,32 @@
 type ContactPayload = {
+  turnstileToken: string;
   email: string;
   message: string;
   name: string;
   subject: string;
   website: string;
 };
+
+type TurnstileVerificationResult = {
+  success: boolean;
+  "error-codes"?: string[];
+  action?: string;
+  hostname?: string;
+};
+
+type WorkerEnv = Cloudflare.Env & {
+  SECRET_KEY: string;
+  SITE_KEY: string;
+};
+
+function withCorsHeaders(headers?: HeadersInit): Headers {
+  const merged = new Headers(headers);
+  merged.set("access-control-allow-origin", "https://robinbayliss.com");
+  merged.set("access-control-allow-methods", "GET, POST, OPTIONS");
+  merged.set("access-control-allow-headers", "content-type");
+  merged.set("vary", "Origin");
+  return merged;
+}
 
 function getAllowedOrigins(csv: string): string[] {
   return csv
@@ -16,9 +38,9 @@ function getAllowedOrigins(csv: string): string[] {
 function jsonResponse(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), {
     status,
-    headers: {
+    headers: withCorsHeaders({
       "content-type": "application/json; charset=utf-8",
-    },
+    }),
   });
 }
 
@@ -111,6 +133,7 @@ async function parsePayload(request: Request): Promise<ContactPayload> {
   const formData = await request.formData();
 
   return {
+    turnstileToken: normalizeField(formData.get("cf-turnstile-response")),
     email: normalizeField(formData.get("email")).toLowerCase(),
     message: normalizeField(formData.get("message")),
     name: normalizeField(formData.get("name")),
@@ -137,6 +160,34 @@ function validatePayload(payload: ContactPayload): string | null {
   }
 
   return null;
+}
+
+function getClientIp(request: Request): string | null {
+  return request.headers.get("CF-Connecting-IP") || request.headers.get("X-Forwarded-For");
+}
+
+async function verifyTurnstile(
+  request: Request,
+  env: WorkerEnv,
+  token: string,
+): Promise<TurnstileVerificationResult> {
+  const formData = new FormData();
+  formData.append("secret", env.SECRET_KEY);
+  formData.append("response", token);
+
+  const remoteIp = getClientIp(request);
+  if (remoteIp) {
+    formData.append("remoteip", remoteIp);
+  }
+
+  formData.append("idempotency_key", crypto.randomUUID());
+
+  const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+    method: "POST",
+    body: formData,
+  });
+
+  return (await response.json()) as TurnstileVerificationResult;
 }
 
 function toPlainText(payload: ContactPayload): string {
@@ -184,19 +235,42 @@ function prefersJson(request: Request): boolean {
 function methodNotAllowed(): Response {
   return new Response("Method not allowed", {
     status: 405,
-    headers: {
+    headers: withCorsHeaders({
       allow: "GET, POST",
       "content-type": "text/plain; charset=utf-8",
-    },
+    }),
   });
 }
 
+function getTurnstileErrorMessage(errors?: string[]): string {
+  if (errors?.includes("timeout-or-duplicate")) {
+    return "The verification expired before the form was sent. Please try again.";
+  }
+
+  return "Verification failed. Please try again.";
+}
+
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: WorkerEnv): Promise<Response> {
     const url = new URL(request.url);
     const isHealthPath = url.pathname === "/" || url.pathname === "/api/contact";
+    const isTurnstileConfigPath = url.pathname === "/turnstile-config";
     const isSubmitPath =
       url.pathname === "/" || url.pathname === "/send" || url.pathname === "/api/contact";
+
+    if (request.method === "OPTIONS" && isTurnstileConfigPath) {
+      return new Response(null, {
+        status: 204,
+        headers: withCorsHeaders(),
+      });
+    }
+
+    if (request.method === "GET" && isTurnstileConfigPath) {
+      return jsonResponse({
+        ok: true,
+        siteKey: env.SITE_KEY,
+      });
+    }
 
     if (request.method === "GET" && isHealthPath) {
       return jsonResponse({
@@ -223,6 +297,55 @@ export default {
           location: env.SUCCESS_URL,
         },
       });
+    }
+
+    if (env.SECRET_KEY) {
+      if (!payload.turnstileToken) {
+        if (prefersJson(request)) {
+          return jsonResponse({ ok: false, error: "Verification is required." }, 400);
+        }
+
+        return htmlResponse(
+          "The note needs one more step",
+          "<p>Please complete the verification and try again.</p><p><a href=\"javascript:history.back()\">Back to the form</a></p>",
+          400,
+        );
+      }
+
+      const turnstile = await verifyTurnstile(request, env, payload.turnstileToken);
+      const actionMatches =
+        !turnstile.success ||
+        !env.TURNSTILE_EXPECTED_ACTION ||
+        turnstile.action === env.TURNSTILE_EXPECTED_ACTION;
+      const hostnameMatches =
+        !turnstile.success ||
+        !env.TURNSTILE_EXPECTED_HOSTNAME ||
+        turnstile.hostname === env.TURNSTILE_EXPECTED_HOSTNAME;
+
+      if (!turnstile.success || !actionMatches || !hostnameMatches) {
+        const errorMessage = !actionMatches || !hostnameMatches
+          ? "Verification failed. Please refresh the page and try again."
+          : getTurnstileErrorMessage(turnstile["error-codes"]);
+
+        console.warn(
+          JSON.stringify({
+            event: "contact_form_turnstile_rejected",
+            action: turnstile.action,
+            errors: turnstile["error-codes"] ?? [],
+            hostname: turnstile.hostname,
+          }),
+        );
+
+        if (prefersJson(request)) {
+          return jsonResponse({ ok: false, error: errorMessage }, 403);
+        }
+
+        return htmlResponse(
+          "The verification did not stick",
+          `<p>${escapeHtml(errorMessage)}</p><p><a href="javascript:history.back()">Back to the form</a></p>`,
+          403,
+        );
+      }
     }
 
     const validationError = validatePayload(payload);
@@ -296,4 +419,4 @@ export default {
       },
     });
   },
-} satisfies ExportedHandler<Env>;
+} satisfies ExportedHandler<WorkerEnv>;

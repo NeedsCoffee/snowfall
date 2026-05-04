@@ -554,6 +554,12 @@ main {
     font-style: italic;
 }
 
+.contact-helper {
+    margin: -0.15rem 0 0.35rem 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.95rem !important;
+}
+
 .contact-form {
     display: grid;
     gap: 0.85rem;
@@ -602,6 +608,10 @@ main {
             color: $color-button;
         }
     }
+}
+
+.contact-turnstile {
+    margin-top: 0.5rem;
 }
 
 .contact-honeypot {

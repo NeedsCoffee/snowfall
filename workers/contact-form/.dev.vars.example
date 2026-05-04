@@ -1,2 +1,4 @@
 CONTACT_FROM_EMAIL="no-reply@robinbayliss.com"
 CONTACT_TO_EMAIL="your-private-destination@example.com"
+SECRET_KEY="your-turnstile-secret-key"
+SITE_KEY="your-turnstile-site-key"

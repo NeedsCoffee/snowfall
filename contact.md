@@ -23,7 +23,7 @@ title: Contact The Author
 
   <section class="contact-form-panel">
     <h2>Message Robin</h2>
-    <p class="contact-status">Form status: live once the Cloudflare Worker is deployed on <code>{{ site.contact_form_endpoint }}</code>.</p>
+    <p class="contact-status" id="contact-status">Spam protection is loading.</p>
     <form class="contact-form" action="{{ site.contact_form_endpoint }}" method="POST">
       <label for="contact-name">Your Name</label>
       <input id="contact-name" type="text" name="name" required>
@@ -42,7 +42,82 @@ title: Contact The Author
         <input id="contact-website" type="text" name="website" tabindex="-1" autocomplete="off">
       </div>
 
-      <button type="submit">Send</button>
+      <div class="contact-turnstile">
+        <div id="contact-turnstile-widget"></div>
+      </div>
+      <p class="contact-helper" id="contact-helper">The form will wake up once the verification widget finishes loading.</p>
+
+      <button type="submit" id="contact-submit" disabled>Send</button>
     </form>
   </section>
 </div>
+
+<script>
+  (function () {
+    var endpoint = "{{ site.contact_form_endpoint }}";
+    var statusNode = document.getElementById("contact-status");
+    var helperNode = document.getElementById("contact-helper");
+    var submitButton = document.getElementById("contact-submit");
+    var widgetNode = document.getElementById("contact-turnstile-widget");
+    var rendered = false;
+
+    function setStatus(statusText, helperText, enabled) {
+      if (statusNode) statusNode.textContent = statusText;
+      if (helperNode) helperNode.textContent = helperText;
+      if (submitButton) submitButton.disabled = !enabled;
+    }
+
+    function renderWidget(siteKey) {
+      if (rendered) return;
+      if (!window.turnstile || !widgetNode) {
+        window.setTimeout(function () { renderWidget(siteKey); }, 150);
+        return;
+      }
+
+      window.turnstile.render(widgetNode, {
+        sitekey: siteKey,
+        action: "contact",
+        theme: "dark",
+        callback: function () {
+          rendered = true;
+          setStatus(
+            "Spam protection is active through Cloudflare Turnstile.",
+            "If the verification expires before you hit send, refresh the page and try again.",
+            true
+          );
+        },
+        "error-callback": function () {
+          setStatus(
+            "Spam protection hit a snag.",
+            "Refresh the page and try again before sending your note.",
+            false
+          );
+        },
+        "expired-callback": function () {
+          setStatus(
+            "Verification expired.",
+            "Refresh the page and try again before sending your note.",
+            false
+          );
+        }
+      });
+    }
+
+    fetch(endpoint + "/turnstile-config", { credentials: "omit" })
+      .then(function (response) {
+        if (!response.ok) throw new Error("config");
+        return response.json();
+      })
+      .then(function (data) {
+        if (!data || !data.siteKey) throw new Error("missing");
+        renderWidget(data.siteKey);
+      })
+      .catch(function () {
+        setStatus(
+          "Spam protection is unavailable right now.",
+          "Please refresh the page and try again in a moment.",
+          false
+        );
+      });
+  }());
+</script>
