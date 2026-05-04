@@ -449,6 +449,63 @@ main {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+// --- Library Page Styles ---
+.library-page {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.library-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.9fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.library-copy p,
+.library-content p,
+.library-content li {
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.library-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+.library-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.library-section h2 {
+    font-family: $font-title;
+    color: $color-heading;
+    font-size: 2.3rem;
+    margin: 0 0 1rem 0;
+}
+
+.library-section ol,
+.library-section ul {
+    margin: 0;
+    padding-left: 1.4rem;
+}
+
+.library-section li + li {
+    margin-top: 0.8rem;
+}
+
+.library-signoff {
+    margin: 0;
+    font-style: italic;
+}
+
 // --- Mobile Responsiveness Fixes ---
 @media (max-width: 576px) {
     .category-book-grid {
@@ -465,6 +522,10 @@ main {
     .category-title {
         font-size: 2.3rem;
     }
+
+    .library-section h2 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 820px) {
@@ -475,6 +536,10 @@ main {
     .featured-category-cover img {
         margin-left: 0;
         max-width: 300px;
+    }
+
+    .library-hero {
+        grid-template-columns: 1fr;
     }
 }
 
