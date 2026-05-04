@@ -107,7 +107,6 @@
   listen_now_url: ""
   season: 2
   categories:
-    - "new-in"
     - "great-twin-swap"
 -
   cover_image: "11-lake-mittens.jpg"
@@ -119,4 +118,5 @@
   listen_now_url: ""
   season: 2
   categories:
+    - "new-in"
     - "sweet-second-chances"

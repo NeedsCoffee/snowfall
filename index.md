@@ -11,7 +11,7 @@ title: Books
   <p class="series-welcome-text">Welcome to Snowball Falls, a small town where cocoa, love, and Christmas miracles collide. Every story brings new love, old gossip, and one more reason to believe in happy endings.</p>
 </div>
 
-{% assign featured_book = site.data.books | where: "info_title", "The Billionaire's Holiday Fix" | first %}
+{% assign featured_book = site.data.books | where_exp: "book", "book.categories contains 'new-in'" | first %}
 
 <section class="browse-intro" aria-labelledby="browse-snowball-falls">
   <div class="browse-intro-copy">
