@@ -14,7 +14,7 @@ Here's the gist:
 - I only collect the info you give me (like your name and email).
 - I use it to send you charming emails about books, giveaways, and Snowball Falls gossip (the good kind).
 - I won't sell your details. Not to spammers, scammers, or even the town council.
-- You can unsubscribe anytime, though I'll miss you more than Emma misses Bing Crosby when he hides under the bed.
+- You can unsubscribe anytime, though I'll miss you more than Emma misses Bing Clawsby when he hides under the bed.
 
 The legal version starts below. It's very serious and has fewer jokes, but it's important. Brew a hot chocolate and scroll on if you're curious or just like reading things in small print.
 
